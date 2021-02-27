@@ -75,7 +75,7 @@ program test_scalapack
         start_all = MPI_Wtime()
     end if 
 
-    do N = 2, 10
+    do N = 2, 8
 
         if (iam .eq. 0) then 
             open(unit=73, file='./results/eig_'//trim(which_model)//'_'//trim(str_i(N))//'.txt', action="write")
@@ -132,7 +132,7 @@ program test_scalapack
             if (iam .eq. 0) then
                 write(73,*) lambda, w(1)/(N-1) 
                 !write(73,*) lambda*(real(N)/real(N-1)), w(1)/(N-1) 
-                write(66,*) lambda, real(abs(first_eigs(1)))
+                write(66,*) lambda, first_eigs(sizeg), first_eigs(sizeg-1)
             end if 
 
             deallocate(A, Z)
