@@ -11,6 +11,8 @@ j = (jx > jy ? jx : jy)
 f(x) = abs(x) < 2*(j-jz) ? -j - 0.25*x**2/(j-jz) : -abs(x)-jz   
 g(x) = abs(x) < 2 ? - 0.25*x**2 -1 : -abs(x) 
 
+set yrange [-7:-1.5]
+
 set xlabel "λ"
 set ylabel "e"
 set grid

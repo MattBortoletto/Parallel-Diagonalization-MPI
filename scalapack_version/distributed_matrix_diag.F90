@@ -27,7 +27,7 @@ program test_scalapack
 
   
     which_model = 'H'
-    couplings = (/-2.d0,-2.d0,-1.d0/)
+    couplings = (/-1.d0,-1.d0,-1.d0/)
 
     nb = 4
     
