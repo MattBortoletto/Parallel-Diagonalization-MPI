@@ -27,7 +27,7 @@ program test_scalapack
 
   
     which_model = 'H'
-    couplings = (/-1.d0,-1.d0,-1.d0/)
+    couplings = (/-2.d0,-2.d0,-1.d0/)
 
     nb = 4
     
@@ -132,7 +132,7 @@ program test_scalapack
             if (iam .eq. 0) then
                 write(73,*) lambda, w(1)/(N-1) 
                 !write(73,*) lambda*(real(N)/real(N-1)), w(1)/(N-1) 
-                write(66,*) lambda, first_eigs(sizeg), first_eigs(sizeg-1)
+                write(66,*) lambda, real(conjg(first_eigs(sizeg))*first_eigs(sizeg))
             end if 
 
             deallocate(A, Z)
